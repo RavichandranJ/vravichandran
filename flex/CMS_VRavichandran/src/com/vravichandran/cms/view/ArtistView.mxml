@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Panel xmlns:fx="http://ns.adobe.com/mxml/2009"
+		 xmlns:s="library://ns.adobe.com/flex/spark"
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		 xmlns:parsley="http://www.spicefactory.org/parsley"
+		 xmlns:fa="com.ravi.fontawesome.fa.*" xmlns:view="com.vravichandran.cms.view.*">
+	<s:states>
+		<s:State name="defaultState"/>
+		<s:State name="editState"/>
+	</s:states>
+	
+	<s:DataGrid id="dg1"
+				left="10"
+				right="10"
+				top="10"
+				bottom="10"
+				sortableColumns="false"
+				includeIn="defaultState"
+				>
+		<s:columns>
+			<s:ArrayList>				
+				<s:GridColumn dataField="artist_name"
+							  headerText="Artist/Company Name" itemRenderer="com.vravichandran.cms.renderer.TextInputIRenderer">
+				</s:GridColumn>
+				<s:GridColumn dataField="dob"
+							  headerText="Date of Birth" itemRenderer="com.vravichandran.cms.renderer.TextInputIRenderer">
+				</s:GridColumn>
+				<s:GridColumn dataField="profile_pic"
+							  headerText="Profile Pic" itemRenderer="com.vravichandran.cms.renderer.TextInputIRenderer">
+				</s:GridColumn>
+				<s:GridColumn headerText="Edit" editable="false" itemRenderer="com.vravichandran.cms.renderer.artist.EditArtistIRenderer" width="80" />
+				<s:GridColumn headerText="Remove" editable="false" itemRenderer="com.vravichandran.cms.renderer.artist.TrashArtistIRenderer" width="80" />
+			</s:ArrayList>
+		</s:columns>
+	</s:DataGrid>
+	
+	<view:EditArtistFormView id="editArtistFormView" includeIn="editState" width="100%" height="100%" />
+	
+	<s:controlBarContent>
+		<fa:FaButton id="btnAdd"
+					 label="Add New"
+					 fa="&#xf067;"
+					 includeIn="defaultState"
+					 skinClass="com.ravi.fontawesome.fa.skins.ButtonSkin"/>
+		<fa:FaButton id="btnSaveAll"					 
+					 fa="&#xf0c7;"
+					 includeIn="defaultState"
+					 skinClass="com.ravi.fontawesome.fa.skins.ButtonSkin"
+					 label="Save All"/>
+		<fa:FaButton id="btnSave"	
+					 includeIn="editState"
+					 fa="&#xf0c7;"
+					 skinClass="com.ravi.fontawesome.fa.skins.ButtonSkin"
+					 label="Save"/>
+		<fa:FaButton id="btnBack"	
+					 includeIn="editState"
+					 fa="&#xf053;"
+					 skinClass="com.ravi.fontawesome.fa.skins.ButtonSkin"
+					 label="Back"/>
+		
+		<s:Label id="msgLbl" textAlign="center" width="100%" paddingRight="10" paddingTop="5" />
+	</s:controlBarContent>
+</s:Panel>

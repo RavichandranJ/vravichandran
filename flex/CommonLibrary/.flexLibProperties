@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="com.ravi.utils.VOUtils"/>
+    <classEntry path="com.ravi.fontawesome.fa.FaButton"/>
+    <classEntry path="com.ravi.fontawesome.fa.FaButtonAdvanced"/>
+    <classEntry path="com.ravi.utils.DateFormatingUtils"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

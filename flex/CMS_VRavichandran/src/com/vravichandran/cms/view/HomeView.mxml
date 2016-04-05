@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:HGroup width="100%"
+		  height="100%"
+		  paddingBottom="10"
+		  paddingLeft="10"
+		  paddingRight="10"
+		  paddingTop="10"
+		  xmlns:fx="http://ns.adobe.com/mxml/2009"
+		  xmlns:s="library://ns.adobe.com/flex/spark"
+		  xmlns:mx="library://ns.adobe.com/flex/mx"
+		  xmlns:view="com.vravichandran.cms.view.*">
+
+
+	<view:View1 id="navLeft" width="300"
+				height="100%"
+				title="Movies"/>
+
+	<mx:ViewStack id="vs1" selectedIndex="{navLeft.list1.selectedIndex}" width="100%" height="100%">
+		<s:NavigatorContent width="100%" height="100%">
+			<view:MovieView width="100%"
+								  height="100%"
+								  title="Movies"/>
+			
+		</s:NavigatorContent>
+
+		<s:NavigatorContent width="100%" height="100%">
+			<view:ArtistView width="100%"
+								  height="100%"
+								  title="Artist View"/>
+			
+		</s:NavigatorContent>
+
+		<s:NavigatorContent width="100%" height="100%">
+			<view:ArtistMovieView width="100%"
+								  height="100%"
+								  title="Artist and Movie"/>
+
+		</s:NavigatorContent>
+		
+		<s:NavigatorContent width="100%" height="100%">
+			<view:SongView width="100%"
+								  height="100%"
+								  title="Songs"/>
+			
+		</s:NavigatorContent>
+		
+		<s:NavigatorContent width="100%" height="100%">
+			<view:FamilyView width="100%"
+						   height="100%"
+						   title="Family"/>
+			
+		</s:NavigatorContent>
+		
+		<s:NavigatorContent width="100%" height="100%">
+			<view:ArtistTypeView width="100%"
+						   height="100%"
+						   title="Artist Types"/>
+			
+		</s:NavigatorContent>
+		
+		<s:NavigatorContent width="100%" height="100%">
+			<view:RelationTypeView width="100%"
+								 height="100%"
+								 title="Family Types"/>
+			
+		</s:NavigatorContent>
+	</mx:ViewStack>
+
+
+
+</s:HGroup>

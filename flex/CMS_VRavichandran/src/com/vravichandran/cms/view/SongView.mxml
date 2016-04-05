@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Panel xmlns:fx="http://ns.adobe.com/mxml/2009"
+		 xmlns:s="library://ns.adobe.com/flex/spark"
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		 xmlns:parsley="http://www.spicefactory.org/parsley"
+		 xmlns:fa="com.ravi.fontawesome.fa.*">
+	<s:HGroup left="10"
+			  top="10"
+			  gap="10"
+			  verticalAlign="middle">
+		<s:Label text="Movie:"/>
+		<s:ComboBox id="cb"
+					width="300"
+					labelField="movie_name"
+					prompt="Select Movie"/>
+	</s:HGroup>
+	<s:DataGrid id="dg1"
+				left="10"
+				right="10"
+				top="40"
+				bottom="10"
+				editable="false"
+				sortableColumns="false">
+		<s:columns>
+			<s:ArrayList>
+				<s:GridColumn dataField="song_name"
+							  headerText="Song"
+							  itemRenderer="com.vravichandran.cms.renderer.TextInputIRenderer">
+				</s:GridColumn>
+
+				<s:GridColumn dataField="lyrics"
+							  headerText="Lyrics"
+							  itemRenderer="com.vravichandran.cms.renderer.song.LyricsIRenderer">
+				</s:GridColumn>
+				
+				<s:GridColumn dataField="singer1"
+							  headerText="Singer"
+							  itemRenderer="com.vravichandran.cms.renderer.song.Singer1IRenderer">
+				</s:GridColumn>				
+				
+				<s:GridColumn dataField="singer2"
+							  headerText="Singer"
+							  itemRenderer="com.vravichandran.cms.renderer.song.Singer2IRenderer">
+				</s:GridColumn>
+				<!--<s:GridColumn dataField="singer3"
+							  headerText="Singer"
+							  itemRenderer="com.vravichandran.cms.renderer.song.Singer3IRenderer">
+				</s:GridColumn>-->
+				<s:GridColumn headerText="Remove"
+							  editable="false"
+							  itemRenderer="com.vravichandran.cms.renderer.song.TrashSongIRenderer"
+							  width="60"/>
+			</s:ArrayList>
+		</s:columns>
+	</s:DataGrid>
+	<s:controlBarContent>
+		<fa:FaButton id="btnAdd"
+					 label="Add New"
+					 fa="&#xf067;"
+					 skinClass="com.ravi.fontawesome.fa.skins.ButtonSkin"/>
+		<fa:FaButton id="btnSaveAll"
+					 fa="&#xf0c7;"
+					 skinClass="com.ravi.fontawesome.fa.skins.ButtonSkin"
+					 label="Save All"/>
+	</s:controlBarContent>
+</s:Panel>

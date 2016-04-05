@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Panel xmlns:fx="http://ns.adobe.com/mxml/2009"
+		 xmlns:s="library://ns.adobe.com/flex/spark"
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		 xmlns:parsley="http://www.spicefactory.org/parsley"
+		 xmlns:fa="com.ravi.fontawesome.fa.*">
+	<s:HGroup left="10"
+			  top="10"
+			  gap="10"
+			  verticalAlign="middle">
+		<s:Label text="Artist:"/>
+		<s:ComboBox id="cb"
+					width="300"
+					labelField="artist_name"
+					prompt="Select Movie"/>
+	</s:HGroup>
+	<s:DataGrid id="dg1"
+				left="10"
+				right="10"
+				top="40"
+				bottom="10"
+				sortableColumns="false">
+		<s:columns>
+			<s:ArrayList>
+				<!--<s:GridColumn dataField="relative_id"
+							  headerText="Relative">
+				</s:GridColumn>
+				
+				<s:GridColumn dataField="relativeIndex"
+							  headerText="relativeIndex">
+				</s:GridColumn>-->
+				
+				<s:GridColumn dataField="relative_id"
+							  headerText="Relative"
+							  itemRenderer="com.vravichandran.cms.renderer.family.RelativeIRenderer"
+							  >
+				</s:GridColumn>
+				<!--<s:GridColumn dataField="relation_type_id"
+							  headerText="Relation Type">
+				</s:GridColumn>
+				
+				<s:GridColumn dataField="relation_typeIndex"
+							  headerText="relation_typeIndex">
+				</s:GridColumn>-->
+				<s:GridColumn dataField="relation_type_id"
+							  headerText="Relation Type"
+							  itemRenderer="com.vravichandran.cms.renderer.family.RelationTypeIRenderer">
+				</s:GridColumn>
+				<s:GridColumn headerText="Remove"
+							  editable="false"
+							  itemRenderer="com.vravichandran.cms.renderer.family.TrashFamilyIRenderer"
+							  width="80"/>
+
+			</s:ArrayList>
+		</s:columns>
+	</s:DataGrid>
+	<s:controlBarContent>
+		<fa:FaButton id="btnAdd"
+					 label="Add New"
+					 fa="&#xf067;"
+					 skinClass="com.ravi.fontawesome.fa.skins.ButtonSkin"/>
+		<fa:FaButton id="btnSaveAll"
+					 fa="&#xf0c7;"
+					 skinClass="com.ravi.fontawesome.fa.skins.ButtonSkin"
+					 label="Save All"/>
+	</s:controlBarContent>
+</s:Panel>

@@ -1,0 +1,38 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+
+@font-face {
+	fontFamily:             FontAwesome;
+	embed-as-cff:           true;
+	src:                    url("fonts/fontAwesome/FontAwesome.otf");
+	fontStyle:              normal;
+}
+
+@font-face {
+	fontFamily:             FontAwesomeNonCff;
+	embed-as-cff:           false;
+	src:                    url("fonts/fontAwesome/FontAwesome.otf");
+	fontStyle:              normal;
+}
+
+.fa
+{
+	fontSize: 22;
+	fontFamily: FontAwesome;
+	color: #FFFFFF;
+}
+
+.fa_sm
+{
+	fontSize: 16;
+	fontFamily: FontAwesome;
+	color: #484848;
+}
+
+.fa_lg
+{
+	fontSize: 36;
+	fontFamily: FontAwesome;
+	color: #FFFFFF;
+}

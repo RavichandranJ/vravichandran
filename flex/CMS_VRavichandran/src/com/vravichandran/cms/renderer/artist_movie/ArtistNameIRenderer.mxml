@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:GridItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009"
+					xmlns:s="library://ns.adobe.com/flex/spark"
+					xmlns:mx="library://ns.adobe.com/flex/mx"
+					clipAndEnableScrolling="true">	
+	<fx:Script>
+		<![CDATA[
+			import com.vravichandran.cms.vo.ArtistMovieVO;
+			import com.vravichandran.cms.vo.ArtistVO;
+			
+			import spark.events.IndexChangeEvent;
+			
+			protected function cb_changeHandler(event:IndexChangeEvent):void
+			{
+				if(data.artist_id != cb.selectedItem.artist_id)
+				{
+					data.artist_id = cb.selectedItem.artist_id;
+					data.isDirty = true;
+					data.artistIndex = event.newIndex;
+				}				
+			}
+			
+		]]>
+	</fx:Script>
+	<s:ComboBox id="cb"
+				change="cb_changeHandler(event)"
+				labelField="artist_name"		
+				selectedIndex="{data.artistIndex}"
+				left="9"
+				right="9"
+				top="4"
+				bottom="4"/>
+</s:GridItemRenderer>
