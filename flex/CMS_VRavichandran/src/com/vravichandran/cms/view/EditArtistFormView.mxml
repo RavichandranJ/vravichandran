@@ -42,6 +42,9 @@
 				<s:FormItem  label="Profile Pic" >			
 					<s:TextInput width="400" text="@{vo.profile_pic}" />
 				</s:FormItem>
+				<s:FormItem  label="Position" >			
+					<s:TextInput width="400" text="@{vo.designation}" />
+				</s:FormItem>
 				<s:FormItem  label="Date of Birth" >			
 					<mx:DateField selectedDate="@{vo.dob}" width="400" />			
 				</s:FormItem>
@@ -50,14 +53,14 @@
 				</s:FormItem>
 				
 				<s:FormItem  label="Youtube URL" >			
-					<s:TextInput width="400" text="{vo.youtube_video_url}" />
+					<s:TextInput width="400" text="@{vo.youtube_video_url}" />
 				</s:FormItem>
 				<s:FormItem  label="Facebook URL" >			
-					<s:TextInput width="400" text="{vo.fb_page}" />
+					<s:TextInput width="400" text="@{vo.fb_page}" />
 				</s:FormItem>
 				
 				<s:FormItem  label="Banner" >			
-					<s:TextInput width="400" text="{vo.banner}" />
+					<s:TextInput width="400" text="@{vo.banner}" />
 				</s:FormItem>				
 			</s:Form>
 			

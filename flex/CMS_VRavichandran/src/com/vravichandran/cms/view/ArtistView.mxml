@@ -16,6 +16,7 @@
 				bottom="10"
 				sortableColumns="false"
 				includeIn="defaultState"
+				editable="false"
 				>
 		<s:columns>
 			<s:ArrayList>				
@@ -23,7 +24,9 @@
 							  headerText="Artist/Company Name" itemRenderer="com.vravichandran.cms.renderer.TextInputIRenderer">
 				</s:GridColumn>
 				<s:GridColumn dataField="dob"
-							  headerText="Date of Birth" itemRenderer="com.vravichandran.cms.renderer.TextInputIRenderer">
+							  headerText="Date of Birth"
+							  itemRenderer="com.vravichandran.cms.renderer.artist.DateIRenderer"
+							  >
 				</s:GridColumn>
 				<s:GridColumn dataField="profile_pic"
 							  headerText="Profile Pic" itemRenderer="com.vravichandran.cms.renderer.TextInputIRenderer">

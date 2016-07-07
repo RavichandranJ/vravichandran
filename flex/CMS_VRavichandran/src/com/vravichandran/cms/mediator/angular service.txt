@@ -1,0 +1,1 @@
+The $http service is a core Angular service that facilitates communication with the remote HTTP servers via JSONP.

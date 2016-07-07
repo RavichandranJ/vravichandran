@@ -61,12 +61,13 @@ package com.vravichandran.cms.mediator
 			{
 				if (vo.isDirty && vo.artist_movie_id > 0)
 				{
-					dispatch(new ArtistMovieEvent(ArtistMovieEvent.UPDATE_ARTIST_MOVIE, vo));
+					dispatch(new ArtistMovieEvent(ArtistMovieEvent.UPDATE_ARTIST_MOVIE, vo));					
 				}
 				else if (vo.isDirty && vo.artist_movie_id == 0)
 				{
 					dispatch(new ArtistMovieEvent(ArtistMovieEvent.ADD_ARTIST_MOVIE, vo));
 				}
+				vo.isDirty = false;
 			}
 
 		}
